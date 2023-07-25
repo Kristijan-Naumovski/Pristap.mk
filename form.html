@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/dist/output.css" rel="stylesheet" />
+    <link href="https://cdn.tailwindcss.com/2.2.19/tailwind.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-pdc1ZGu70loXz/tZu5TT9B00s00NjFmFDCakEea9HKvZkaQOjT6rwtdrXQT0QYk5cmU9vyJewvK7x5jeiGprQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Pristap.mk</title>
+</head>
+
+<body>
+    <div>
+        <div class="mx-auto bg-indigo-800">
+            <div class="flex flex-col sm:flex-row justify-between items-center px-20 pt-14 md:pb-28 pb-20">
+                <div class="mb-8 sm:mr-8">
+                    <img src="svg/pristap.svg" alt="logo">
+                </div>
+                <div class="text-white bg-indigo-900 md:px-6 md:py-3 px-3 py-1 rounded-lg">
+                    <p>About Us</p>
+                </div>
+            </div>
+
+        </div>
+        <div class="bg-indigo-800  pt-20 pb-28">
+            <div class="container mx-auto bg-white rounded p-16">
+                <div class="flex justify-between text-indigo-700 border-b-2 pb-14">
+                    <p>До институција:</p>
+                    <div class="h-384 w-48">
+                        <select id="countries"
+                            class="bg-gray-50 border border-gray-300 border-b text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 w-full h-full">
+                            <option selected>Choose an option</option>
+                            <option value="US"></option>
+                            <option value="CA"></option>
+                            <option value="FR"></option>
+                            <option value="DE"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="flex justify-between text-indigo-700 border-b-2 pb-14 pt-8">
+                    <p>Опис на информацијата:</p>
+                    <div>
+                        <input
+                            class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-14 px-8 mb-3"
+                            id="grid-first-name" type="text">
+                    </div>
+                </div>
+                <div class="flex justify-between text-indigo-700 border-b-2 pb-14 pt-8">
+                    <p>Форма во која се бара информацијата:</p>
+                    <div class="pr-28 flex-col space-y-2">
+                        <label class="flex items-center">
+                            <input type="checkbox"
+                                class="form-checkbox h-4 w-4 text-indigo-700 border-gray-300 rounded">
+                            <span class="ml-2 text-gray-700 text-xs">Увид</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox"
+                                class="form-checkbox h-4 w-4 text-indigo-700 border-gray-300 rounded">
+                            <span class="ml-2 text-gray-700 text-xs">Препис</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox"
+                                class="form-checkbox h-4 w-4 text-indigo-700 border-gray-300 rounded">
+                            <span class="ml-2 text-gray-700 text-xs">Фотокопија</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox"
+                                class="form-checkbox h-4 w-4 text-indigo-700 border-gray-300 rounded">
+                            <span class="ml-2 text-gray-700 text-xs">Електронски Запис</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox"
+                                class="form-checkbox h-4 w-4 text-indigo-700 border-gray-300 rounded">
+                            <span class="ml-2 text-gray-700 text-xs">Друго</span>
+                        </label>
+
+                    </div>
+                </div>
+                <div class="flex justify-between text-indigo-700 border-b-2 pb-14 pt-8">
+                    <p>Начин на доставување на информацијата:</p>
+                    <div class="pr-40 flex-col space-y-2">
+                        <label class="flex items-center">
+                            <input type="checkbox"
+                                class="form-checkbox h-4 w-4 text-indigo-700 border-gray-300 rounded">
+                            <span class="ml-2 text-gray-700 text-xs">По Пошта</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox"
+                                class="form-checkbox h-4 w-4 text-indigo-700 border-gray-300 rounded">
+                            <span class="ml-2 text-gray-700 text-xs">Телефон</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox"
+                                class="form-checkbox h-4 w-4 text-indigo-700 border-gray-300 rounded">
+                            <span class="ml-2 text-gray-700 text-xs">Факс</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox"
+                                class="form-checkbox h-4 w-4 text-indigo-700 border-gray-300 rounded">
+                            <span class="ml-2 text-gray-700 text-xs">Е-маил</span>
+                        </label>
+                        <label class="flex items-center">
+                            <input type="checkbox"
+                                class="form-checkbox h-4 w-4 text-indigo-700 border-gray-300 rounded">
+                            <span class="ml-2 text-gray-700 text-xs">Друго</span>
+                        </label>
+
+                    </div>
+                </div>
+                <div class="flex justify-between text-indigo-700 border-b-2 pb-14 pt-8">
+                    <p>Барател на информацијата:</p>
+                    <div class="space-y-2">
+                        <div>
+                            <p class="text-xs">Име и Презиме</p>
+                            <input
+                                class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-2 px-8 mb-3"
+                                id="grid-first-name" type="text">
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-xs">Адреса</p>
+                            <input
+                                class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-8 px-8 mb-3"
+                                id="grid-first-name" type="text">
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-xs">Телефонски бр.</p>
+                            <input
+                                class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-2 px-8 mb-3"
+                                id="grid-first-name" type="text">
+                        </div>
+                        <div class="space-y-2">
+                            <p class="text-xs">Факс</p>
+                            <input
+                                class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-2 px-8 mb-3"
+                                id="grid-first-name" type="text">
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-between text-indigo-700 border-b-2 pb-14 pt-8">
+                    <p>Застапник / полномошник на барателот:</p>
+                    <div class="space-y-2">
+                        <div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="flex justify-between text-indigo-700 border-b-2 pb-14 pt-8">
+                    <p>Барател на информацијата:</p>
+                    <div class="space-y-2">
+                        <input
+                            class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-2 px-8 mb-3"
+                            id="grid-first-name" type="text">
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+
+
+            <div class="bg-indigo-800 pt-28">
+                <p class=" text-indigo-800 ">a</p>
+            </div>
+        </div>
+</body>
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+
+</html>

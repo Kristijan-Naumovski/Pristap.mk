@@ -1,85 +1,219 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="/dist/output.css" rel="stylesheet" />
-    <link
-      href="https://cdn.tailwindcss.com/2.2.19/tailwind.min.css"
-      rel="stylesheet"
-    />
-    <title>Pristap.mk</title>
-  </head>
-  <body>
-    <div>
-      <div class="mx-auto bg-indigo-800">
-        <div class="flex flex-col sm:flex-row justify-between items-center px-20 pt-14 md:pb-28 pb-20">
-            <div class="mb-8 sm:mr-8">
-              <img src="svg/pristap.svg" alt="logo">
-            </div>
-            <div class="text-white bg-indigo-900 md:px-6 md:py-3 px-3 py-1 rounded-lg">
-              <p>About Us</p>
-            </div>
-          </div>
-          
-        <div class="text-white md:text-5xl text-2xl mx-8 md:mx-60 text-center pb-20">
-          <p>Generate documents in easy steps.</p>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="/dist/output.css" rel="stylesheet" />
+  <link href="https://cdn.tailwindcss.com/2.2.19/tailwind.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-pdc1ZGu70loXz/tZu5TT9B00s00NjFmFDCakEea9HKvZkaQOjT6rwtdrXQT0QYk5cmU9vyJewvK7x5jeiGprQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>Pristap.mk</title>
+</head>
+
+<body>
+  <div>
+    <div class="mx-auto bg-indigo-800">
+      <div class="flex flex-col sm:flex-row justify-between items-center px-20 pt-14 md:pb-28 pb-20">
+        <div class="mb-8 sm:mr-8">
+          <img src="svg/pristap.svg" alt="logo">
+        </div>
+        <div class="text-white bg-indigo-900 md:px-6 md:py-3 px-3 py-1 rounded-lg">
+          <p>About Us</p>
         </div>
       </div>
-      <div class="flex justify-center pb-28 bg-indigo-800 rounded-b-full">
-        <p class="text-white text-center bg-pink-600 md:px-6 md:py-3 px-3 py-1 rounded-lg">
-          Start now
-        </p>
-      </div>
-      <div class="text-center md:text-2xl text-lg mt-16 mb-12 text-indigo-800">
-        <p>Get started in 3 easy steps.</p>
-      </div>
-      <div class="flex flex-col sm:flex-row justify-between items-center mb-10 md:mb-96 mx-8 space-y-4 md:space-x-8">
-        <div class="border border-gray-400 rounded-md p-8 w-full sm:w-auto">
-          <div class="text-center">
-            <img src="img/form.png" alt="form" class="mx-auto" />
-          </div>
-          <div class="md:text-4xl text-2xl text-indigo-800 text-center py-4">
-            <p>Fill the Form</p>
-          </div>
-          <div class="text-indigo-600 text-center text-xs md:text-base">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec in nisi.
-            </p>
-          </div>
-        </div>
-        <div class="border border-gray-400 rounded-md p-8 w-full sm:w-auto">
-          <div class="text-center">
-            <img src="img/printer.png" alt="form" class="mx-auto" />
-          </div>
-          <div class="md:text-4xl text-2xl text-indigo-800 text-center py-4">
-            <p>Print It</p>
-          </div>
-          <div class="text-indigo-600 text-center text-xs md:text-base">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec in nisi.
-            </p>
-          </div>
-        </div>
-        <div class="border border-gray-400 rounded-md p-8 w-full sm:w-auto">
-          <div class="text-center">
-            <img src="img/letter.png" alt="form" class="mx-auto" />
-          </div>
-          <div class="md:text-4xl text-2xl text-indigo-800 text-center py-4">
-            <p>Send It</p>
-          </div>
-          <div class="text-indigo-600 text-center text-xs md:text-base">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec in nisi.
-            </p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="bg-indigo-800 pt-28">
-      <p class=" text-indigo-800 ">a</p>
+
+      <div class="text-white md:text-5xl text-2xl mx-8 md:mx-60 text-center ">
+        <p>Generate documents in easy steps.</p>
       </div>
     </div>
-  </body>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <div class='flex items-center justify-center pt-20 pb-28 bg-indigo-800 rounded-b-full'>
+      <nav class="space-x-10 md:flex">
+        <div class="relative" x-data="{ open: false }">
+          <button @click="open = ! open" type="button"
+            class="text-white group p-4 inline-flex items-center rounded-md bg-pink-600 text-base font-medium hover:text-gray-900"
+            aria-expanded="false">
+            <span>Start Now</span>
+            <svg :class="{'rotate-180 duration-300': open, 'duration-300' : !open}"
+              class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                clip-rule="evenodd" />
+            </svg>
+          </button>
+
+          <div x-show="open" x-transition:enter="transition ease-out duration-200"
+            x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+            x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 scale-100"
+            x-transition:leave-end="opacity-0 scale-90"
+            class="absolute left-1/2 z-full mt-3 w-screen max-w-md -translate-x-1/2 transform px-2 sm:px-0">
+
+
+            <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2">
+              <div class=" -mx-3 md:flex mb-6">
+                <div class="md:w-full px-3 mb-6 md:mb-0">
+                  <label class="block uppercase tracking-wide text-grey-darker text-xs font-bold mb-2"
+                    for="grid-first-name">
+                    Name and Surname
+                  </label>
+                  <input
+                    class="appearance-none block w-full bg-grey-lighter text-grey-darker border border-red rounded py-3 px-4 mb-3"
+                    id="grid-first-name" type="text">
+                </div>
+
+              </div>
+              <div class='flex justify-center pb-4'>
+                <nav class="space-x-10 md:flex">
+                  <div class="relative border border-red rounded py-3 px-4" x-data="{ open: false }">
+                    <button @click="open = !open" type="button"
+                      class="text-white px-24 rounded-md bg-white-600 text-base font-medium flex hover:text-gray-900"
+                      aria-expanded="false">
+                      <span class="whitespace-nowrap">Choose An Option</span>
+                      <svg :class="{'rotate-180 duration-300': open, 'duration-300': !open}"
+                        class="text-gray-400 ml-2 h-5 w-5 group-hover:text-gray-500" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                          d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                          clip-rule="evenodd" />
+                      </svg>
+                    </button>
+              
+                    <div x-show="open" x-transition:enter="transition ease-out duration-200"
+                      x-transition:enter-start="opacity-0 scale-90" x-transition:enter-end="opacity-100 scale-100"
+                      x-transition:leave="transition ease-in duration-200" x-transition:leave-start="opacity-100 scale-100"
+                      x-transition:leave-end="opacity-0 scale-90"
+                      class="absolute left-1/2 z-full mt-3 w-screen max-w-md -translate-x-1/2 transform px-2 sm:px-0">
+                      <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col my-2 space-y-4">
+                        <div class="border border-red rounded py3 px-4">
+                          
+                        <div>
+                          <p class="font-bold pb-4">Јавна општинска установа за деца-Детска градинка 8 МАРТ Струга</p>
+                        </div>
+                        <div class="flex space-x-4">
+                          <div class="flex items-center space-x-2">
+                            <img src="svg/folder.svg" alt="folder">
+                            <p class="text-xs">СТРУГА</p>
+                          </div>
+                          <div class="flex items-center space-x-2">
+                            <img src="svg/map.svg" alt="map">
+                            <p class="text-xs">НАСЕЛЕНО МЕСТО БЕЗ УЛИЧЕН СИСТЕМ</p>
+                          </div>
+                        </div>
+                        
+                      </div>
+                      <div class="border border-red rounded py3 px-4">
+                          
+                        <div>
+                          <p class="font-bold pb-4">Јавна општинска установа за деца-Детска градинка 8 МАРТ Струга</p>
+                        </div>
+                        <div class="flex space-x-4">
+                          <div class="flex items-center space-x-2">
+                            <img src="svg/folder.svg" alt="folder">
+                            <p class="text-xs">СТРУГА</p>
+                          </div>
+                          <div class="flex items-center space-x-2">
+                            <img src="svg/map.svg" alt="map">
+                            <p class="text-xs">НАСЕЛЕНО МЕСТО БЕЗ УЛИЧЕН СИСТЕМ</p>
+                          </div>
+                        </div>
+                        
+                      </div>
+                      <div class="border border-red rounded py3 px-4">
+                          
+                        <div>
+                          <p class="font-bold pb-4">Јавна општинска установа за деца-Детска градинка 8 МАРТ Струга</p>
+                        </div>
+                        <div class="flex space-x-4">
+                          <div class="flex items-center space-x-2">
+                            <img src="svg/folder.svg" alt="folder">
+                            <p class="text-xs">СТРУГА</p>
+                          </div>
+                          <div class="flex items-center space-x-2">
+                            <img src="svg/map.svg" alt="map">
+                            <p class="text-xs">НАСЕЛЕНО МЕСТО БЕЗ УЛИЧЕН СИСТЕМ</p>
+                          </div>
+                        </div>
+                        
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                </nav>
+              </div>
+              <div class="flex">
+                <div class="bg-indigo-700 hover:bg-indigo-900 rounded px-4 py-2 flex items-center space-x-2">
+                  <img src="svg/download.svg" alt="download">
+                  <p class="text-white text-bold">Преземи</p>
+                </div>
+              </div>
+              
+              
+              
+              
+            </div>
+
+          </div>
+        </div>
+    </div>
+    </nav>
+  </div>
+  <div class="text-center md:text-2xl text-lg mt-16 mb-12 text-indigo-800">
+    <p>Get started in 3 easy steps.</p>
+  </div>
+  <div
+    class="flex flex-col sm:flex-row justify-between items-center mb-10 md:mb-96 mx-8  md:space-x-8 space-y-4 md:space-y-0">
+    <div class="border border-gray-400 rounded-md p-8 w-64 h-80 sm:w-auto">
+      <div class="text-center">
+        <img src="img/form.png" alt="form" class="mx-auto" />
+      </div>
+      <div class="md:text-4xl text-2xl text-indigo-800 text-center py-4">
+        <p>Write It</p>
+
+      </div>
+      <div class="text-indigo-600 text-center text-xs md:text-base">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec in nisi.
+        </p>
+
+      </div>
+    </div>
+    <div class="border border-gray-400 rounded-md p-8 w-64 h-80 sm:w-auto">
+      <div class="text-center">
+        <img src="img/printer.png" alt="form" class="mx-auto" />
+      </div>
+      <div class="md:text-4xl text-2xl text-indigo-800 text-center py-4">
+        <p>Print It</p>
+      </div>
+      <div class="text-indigo-600 text-center text-xs md:text-base">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec in nisi.
+        </p>
+      </div>
+    </div>
+    <div class="border border-gray-400 rounded-md p-8 w-64 h-80 sm:w-auto">
+      <div class="text-center">
+        <img src="img/letter.png" alt="form" class="mx-auto" />
+      </div>
+      <div class="md:text-4xl text-2xl text-indigo-800 text-center py-4">
+        <p>Send It</p>
+      </div>
+      <div class="text-indigo-600 text-center text-xs md:text-base">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi nec in nisi.
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="bg-indigo-800 pt-28">
+    <p class=" text-indigo-800 ">a</p>
+  </div>
+  </div>
+</body>
+<script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+
 </html>
